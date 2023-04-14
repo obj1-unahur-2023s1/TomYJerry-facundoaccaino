@@ -1,0 +1,19 @@
+import tom.*
+import ratones.*
+
+test "la energia de tom inicial es 80" {
+
+	assert.equals(80, tom.energia())
+
+}
+
+test "tom es más veloz que jerry"{
+	assert.that(tom.esMasVeloz(jerry))
+}
+
+test "tom primero es más veloz que jerry y luego que lo corre no es más veloz"{
+	
+	assert.that(tom.esMasVeloz(jerry))
+	tom.correrA(jerry)
+	assert.that(tom.esMasVeloz(jerry))		
+}
